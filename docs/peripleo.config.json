@@ -9,6 +9,14 @@
       "attribution": "Historic England OGL v3.0"
     }
   ],
+  "layers": [
+  { 
+    "name": "Rivers & Canals", 
+    "type": "geojson",
+    "src": "./he_regions.geojson", 
+    "color": "#000000" 
+  }
+],
   "facets": [
     {
       "name": "Site type", "path": ["properties", "siteType"]
