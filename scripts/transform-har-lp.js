@@ -73,10 +73,26 @@ const features = records.data.reduce((all, row) => {
     const entryDate = row['entry date'];
 
     const place = county;
-    const description = 'Heritage at Risk Entry: ' + listEntryNumber + '<br/>' + title;
+    const description = 'Heritage at Risk Entry: ' + listEntryNumber + '<br/>' + title +
+    '<ul><li>Entry date: ' + entryDate + '</li>' +
+    '<li>Assessment type: ' + assessmentType + '</li>' +
+    '<li>Condition: ' + condition + '</li>' +
+    '<li>Principal vulnerability: ' + principalVunerability + '</li>' +
+    '<li>Trend: ' + trend + '</li>' +
+    '<li>Ownership: ' + ownership + '</li>' +
+    '<li>Unitary authority: ' + unitaryAuthority + '</li>' +
+    '<li>Building name: ' + buildingName + '</li>' +
+    '<li>Occupancy or use: ' + occupancyOrUse + '</li>' +
+    '<li>Priority: ' + priority + '</li>' +
+    '<li>Priority comment: ' + priorityComment + '</li>' +
+    '<li>Previous priority: ' + previousPriority + '</li>' +
+    '<li>Designation: ' + designation + '</li>' +
+    '<li>Locality: ' + locality + '</li>' +
+    '<li>List entry numbers: ' + listEntryNumbers + '</li>' +
+    '</ul>';
     console.log(place)
     const peripleoRecord = {
-       '@id': listEntryNumber.trim(),
+       '@id': source.trim(),
         type: 'Feature',
         properties: {
             title: title,
