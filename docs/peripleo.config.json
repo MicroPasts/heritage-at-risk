@@ -14,7 +14,7 @@
       "name": "Site type", "path": ["properties", "siteType"]
     },
     {
-      "name": "county", "path": ["properties", "county"]
+      "name": "County", "path": ["properties", "county"]
     },
     {
       "name": "Site sub type", "path": ["properties", "siteSubType"]
@@ -37,13 +37,5 @@
     {
       "name": "Heritage Category", "path": ["properties", "heritageCategory"]
     }
-  ],
-  "link_icons": [
-    { "pattern": "maps.google.com",  "img": "./logos/maps.google.com.png", "label": "Google Maps" },
-    { "pattern": "www.geograph.org.uk", "img": "./logos/geograph.org.png", "label": "Geograph" },
-    { "pattern": "en.wikipedia.org", "img": "./logos/en.wikipedia.org.png", "label": "Wikipedia" },
-    { "pattern": "www.wikidata.org", "img": null, "label": "Wikidata" },
-    { "pattern": "www.geonames.org", "img": null, "label": "GeoNames" },
-    { "pattern": "sws.geonames.org", "img": null, "label": "GeoNames" }
   ]
 }
