@@ -10,16 +10,34 @@
     }
   ],
   "facets": [
-    "siteType",
-    "siteSubType",
-    "county",
-    "parliamentaryConstituency",
-    "region",
-    "assessmentType",
-    "condition",
-    "priority",
-    "heritageCategory"
-  ],
+    {
+      "name": "Site type", "path": ["properties", "siteType"]
+    },
+    {
+      "name": "county", "path": ["properties", "county"]
+    },
+    {
+      "name": "Site sub type", "path": ["properties", "siteSubType"]
+    },
+    {
+      "name": "Parliamentary Constituency", "path": ["properties", "parliamentaryConstituency"]
+    },
+    {
+      "name": "Region", "path": ["properties", "region"]
+    },
+    {
+      "name": "Assessment Type", "path": ["properties", "assessmentType"]
+    },
+    {
+      "name": "Condition", "path": ["properties", "condition"]
+    },
+    {
+      "name": "Priority", "path": ["properties", "priority"]
+    },
+    {
+      "name": "Heritage Category", "path": ["properties", "heritageCategory"]
+    }
+  ]
   "link_icons": [
     { "pattern": "maps.google.com",  "img": "./logos/maps.google.com.png", "label": "Google Maps" },
     { "pattern": "www.geograph.org.uk", "img": "./logos/geograph.org.png", "label": "Geograph" },
