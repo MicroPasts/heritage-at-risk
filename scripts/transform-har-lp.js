@@ -73,23 +73,25 @@ const features = records.data.reduce((all, row) => {
     const entryDate = row['entry date'];
 
     const place = county;
-    const description = 'Heritage at Risk Entry: ' + listEntryNumber + '<br/>' + title +
-    '<ul><li>Entry date: ' + entryDate + '</li>' +
-    '<li>Assessment type: ' + assessmentType + '</li>' +
-    '<li>Condition: ' + condition + '</li>' +
-    '<li>Principal vulnerability: ' + principalVunerability + '</li>' +
-    '<li>Trend: ' + trend + '</li>' +
-    '<li>Ownership: ' + ownership + '</li>' +
-    '<li>Unitary authority: ' + unitaryAuthority + '</li>' +
-    '<li>Building name: ' + buildingName + '</li>' +
-    '<li>Occupancy or use: ' + occupancyOrUse + '</li>' +
-    '<li>Priority: ' + priority + '</li>' +
-    '<li>Priority comment: ' + priorityComment + '</li>' +
-    '<li>Previous priority: ' + previousPriority + '</li>' +
-    '<li>Designation: ' + designation + '</li>' +
-    '<li>Locality: ' + locality + '</li>' +
-    '<li>List entry numbers: ' + listEntryNumbers + '</li>' +
-    '</ul>';
+    let description = 'Heritage at Risk Entry: ' + listEntryNumber + '<br/>' + title + '<ul>';
+
+    if (entryDate && entryDate.length > 0) description += '<li>Entry date: ' + entryDate + '</li>';
+    if (assessmentType && assessmentType.length > 0) description += '<li>Assessment type: ' + assessmentType + '</li>';
+    if (condition && condition.length > 0) description += '<li>Condition: ' + condition + '</li>';
+    if (principalVunerability && principalVunerability.length > 0) description += '<li>Principal vulnerability: ' + principalVunerability + '</li>';
+    if (trend && trend.length > 0) description += '<li>Trend: ' + trend + '</li>';
+    if (ownership && ownership.length > 0) description += '<li>Ownership: ' + ownership + '</li>';
+    if (unitaryAuthority && unitaryAuthority.length > 0) description += '<li>Unitary authority: ' + unitaryAuthority + '</li>';
+    if (buildingName && buildingName.length > 0) description += '<li>Building name: ' + buildingName + '</li>';
+    if (occupancyOrUse && occupancyOrUse.length > 0) description += '<li>Occupancy or use: ' + occupancyOrUse + '</li>';
+    if (priority && priority.length > 0) description += '<li>Priority: ' + priority + '</li>';
+    if (priorityComment && priorityComment.length > 0) description += '<li>Priority comment: ' + priorityComment + '</li>';
+    if (previousPriority && previousPriority.length > 0) description += '<li>Previous priority: ' + previousPriority + '</li>';
+    if (designation && designation.length > 0) description += '<li>Designation: ' + designation + '</li>';
+    if (locality && locality.length > 0) description += '<li>Locality: ' + locality + '</li>';
+    if (listEntryNumbers && listEntryNumbers.length > 0) description += '<li>List entry numbers: ' + listEntryNumbers + '</li>';
+
+    description += '</ul>';
     console.log(place)
     const peripleoRecord = {
        '@id': source.trim(),
