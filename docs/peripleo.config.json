@@ -13,7 +13,7 @@
   { 
     "name": "Rivers & Canals", 
     "type": "geojson",
-    "src": "./he_regions.geojson", 
+    "src": "./data/he_regions.geojson", 
     "color": "#000000" 
   }
 ],
