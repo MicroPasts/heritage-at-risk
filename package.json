@@ -1,0 +1,9 @@
+{
+    "name": "heritage-at-risk",
+    "version": "1.0.0",
+    "type": "module",
+    "dependencies": {
+      "nanoid": "^5.0.1",
+      "papaparse": "^5.4.1"
+    }
+  }
