@@ -11,7 +11,7 @@
   ],
   "layers": [
   { 
-    "name": "Rivers & Canals", 
+    "name": "Historic England Regions", 
     "type": "geojson",
     "src": "./data/he_regions.geojson", 
     "color": "#000000" 
@@ -44,6 +44,9 @@
     },
     {
       "name": "Heritage Category", "path": ["properties", "heritageCategory"]
+    },
+    {
+      "name": "Ownership", "path": ["properties", "ownership"]
     }
   ]
 }
