@@ -2,6 +2,9 @@
 
 This project uses Peripleo to map heritage at risk data from Historic England. Peripleo is a powerful tool for visualizing and exploring geospatial data, making it ideal for showcasing heritage sites that are at risk.
 
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/bf334ad5-cdde-49ed-b0a3-424d8be6ba6e" />
+
+
 ## Overview
 
 The Heritage at Risk Mapping project aims to provide an interactive map that highlights heritage sites identified by Historic England as being at risk. This visualization helps in raising awareness and promoting efforts to preserve these important cultural landmarks.
