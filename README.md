@@ -32,11 +32,13 @@ To get started with the project, follow these steps:
     ```bash
     npm install
     ```
-4. Start the development server:
+4. This installs the node script dependencies for transforming CSV data that has been obtained from Historic England's opendata hub and transformed by the R scripts.
     ```bash
-    npm start
+    cd scripts 
+    node ./transform-har-lp.js
     ```
 
+The web application is served off github pages for free, using the docs folder. 
 ## Contributing
 
 We welcome contributions to the project. If you have suggestions or improvements, please open an issue or submit a pull request.
@@ -52,4 +54,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For any questions or inquiries, please contact [your email address].
+For any questions or inquiries put an issue in and I'll respond.
