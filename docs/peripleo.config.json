@@ -1,7 +1,7 @@
 {
   "initial_bounds": [-5.79, 49.89, 1.78, 55.81],
   "map_style": "./map-style-OSM.json",
-  "welcome": "welcome.md",
+  "welcome_message": "welcome.md",
   "data": [
     {
       "name": "Heritage at Risk",
