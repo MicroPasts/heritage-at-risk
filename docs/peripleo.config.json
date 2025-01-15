@@ -49,5 +49,9 @@
     {
       "name": "Ownership", "path": ["properties", "ownership"]
     }
-  ]
+  ],
+  "link_icons": [
+	    { "pattern": "historicengland.org.uk", "img": "./logos/historicengland.org.uk.svg", "label": "Historic England" },
+	    { "pattern": "www.wikidata.org", "img": "../logos/www.wikidata.org.svg", "label": "Wikidata" }
+	  ]
 }
