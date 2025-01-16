@@ -54,7 +54,7 @@
     }
   ],
   "link_icons": [
-	    { "pattern": "historicengland.org.uk", "img": "./logos/www.historicengland.org.uk.svg", "label": "Historic England" },
+	    { "pattern": "historicengland.org.uk", "img": "./logos/HE.jpg", "label": "Historic England" },
 	    { "pattern": "www.wikidata.org", "img": "./logos/www.wikidata.org.svg", "label": "Wikidata" },
       { "pattern": "commons.wikimedia.org", "img": "./logos/commons.wikimedia.org.svg", "label": "Wikimedia Commons" },
       { "pattern": "achurchnearyou.com", "img":"./logos/c_of_logo_v3.jpg", "label": "A Church Near You" },
