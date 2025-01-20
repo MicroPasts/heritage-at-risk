@@ -32,17 +32,17 @@ const getTypes = (properties) => {
     const siteSubType = properties.site_sub_type;
     const types = [];
 
-    if (wikiInstanceOf && heritageCategory) {
+    if (wikiInstanceOf && siteSubType) {
         types.push({
             identifier: wikiInstanceOf,
-            label: 'A Wikidata type: ' + heritageCategory
+            label: 'A Wikidata type: ' + siteSubType
         });
     }
 
-    if (wikidataEntityID && siteSubType) {
+    if (wikidataEntityID && heritageCategory) {
         types.push({
             identifier: wikidataEntityID,
-            label: 'A Wikidata type: ' + siteSubType
+            label: 'A Wikidata type: ' + heritageCategory
         });
     }
 
