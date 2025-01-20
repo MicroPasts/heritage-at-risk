@@ -213,3 +213,18 @@ Extract P580 claim from json (first listed or start time), create new column fro
 ```
 value.parseJson()['entities'][cells['ids'].value]['claims']['P1435'][0]['qualifiers']['P580'][0].datavalue.value.time
 ```
+
+export const getTypes = (node) => {
+  if (node.types?.length > 0)
+    return node.types.map(t => ({ label: t.label, identifier: t.identifier }));
+  else if (node.properties?.type)
+    return [{ label: node.properties.type, identifier: node.properties.identifier }];
+  else if (node.types?.length > 0)
+    return node.types.map(t => ({ label: t.label, identifier: t.identifier }));
+  else
+    return [];
+}
+
+  <p className="p6o-node-types">
+              {getTypes(node).join(', ')}
+            </p>

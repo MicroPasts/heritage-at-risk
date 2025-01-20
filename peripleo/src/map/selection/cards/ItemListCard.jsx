@@ -84,7 +84,7 @@ const InternalLink = props => {
       <div className="p6o-internal-link-meta">
         <h3>{node.title}</h3>
         <h4>{source}</h4>
-        <p className="p6o-node-types" dangerouslySetInnerHTML={{ __html: getTypes(node).map(type => `<a href="${type.identifier}" target="_blank">${type.label}</a>`).join(', ') }} />
+        <p className="p6o-node-types" dangerouslySetInnerHTML={{ __html: getTypes(node).map(type => `<a href="${type.identifier}" target="_blank">${type.label}</a>`).join('<br /> ') }} />
       </div>
       <BiRightArrowAlt />
     </div>

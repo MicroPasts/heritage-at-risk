@@ -76,7 +76,7 @@ const ItemCard = props => {
     GoogleAnalytics.tagNavigation(sourceUrl);
 
   // Temporary hack!
-  const color = SIGNATURE_COLOR[3]; 
+  const color = SIGNATURE_COLOR[8]; 
 
   return (
     <div 
@@ -159,7 +159,7 @@ const ItemCard = props => {
                 target="_blank">Link opens a new tab</a>
             </div>
 
-            <p className="p6o-node-types" dangerouslySetInnerHTML={{ __html: getTypes(node).map(type => `<a href="${type.identifier}" target="_blank">${type.label}</a>`).join(', ') }} />
+            <p className="p6o-node-types" dangerouslySetInnerHTML={{ __html: getTypes(node).map(type => `<a href="${type.identifier}" target="_blank">${type.label}</a>`).join('<br /> ') }} />
 
 
             {when && 
