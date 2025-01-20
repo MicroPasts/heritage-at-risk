@@ -13,19 +13,55 @@ const getPlace = (lon,lat) => {
 
 }
 
-
-const getType = (row) => {
-    if (row.wikidataID) {
-        return {
-            identifier: 'https://www.wikidata.org/wiki/' + row.wikidataEntityID,
-            label: row.Heritage_Category
-        };
+const getIndexing = () => {
+    return  {
+        "@context": "https://schema.org/",
+        "@type": "Dataset",
+        "name": "Heritage-at-Risk - Historic England",
+        "description": "An enriched dataset of Heritage at Risk entries in England",
+        "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "identifier": "https://www.planning.data.gov.uk/dataset/heritage-at-risk"
     }
-    return null;
+}
+
+
+const getTypes = (properties) => {
+    const wikiInstanceOf = properties.wikiInstanceOf ? 'https://www.wikidata.org/wiki/' + properties.wikiInstanceOf : null;
+    const wikidataEntityID  = properties.wikidataEntityID ? 'https://www.wikidata.org/wiki/' + properties.wikidataEntityID : null;
+    const heritageCategory = properties.heritage_category;
+    const siteSubType = properties.site_sub_type;
+    const types = [];
+
+    if (wikiInstanceOf && wikiInstanceOf !== 'undefined') {
+        types.push({
+            identifier: wikiInstanceOf,
+            label: 'A Wikidata type: ' + heritageCategory
+        });
+    }
+
+    if(wikidataEntityID && wikidataEntityID !== 'undefined') {
+        types.push({
+            identifier: wikidataEntityID,
+            label: 'A Wikidata type: ' + siteSubType
+        });
+    }
+
+    const flatTypes = types.reduce((all, type) => {
+        return {
+            ...all,
+            types: [
+            ...(all.types || []),
+            {
+                identifier: type.identifier,
+                label: type.label
+            }
+            ]
+        };
+    }, {});
+    return flatTypes;
 }
 
 const getDepiction = (row) => {
-    console.log(row)
     if (!row.image_path_commons)
         return;
     const wikicommons = commons('File:'+ row.image_path_commons, 800 /*px*/);
@@ -56,20 +92,26 @@ const getLinks = (properties) => {
     const britishListedBuildingURL = 'https://britishlistedbuildings.co.uk/';
     const wikidataURL = 'https://www.wikidata.org/wiki/';
     const historicenglandURL = 'https://historicengland.org.uk/listing/the-list/list-entry/';
-    
+    const wikipediaENURL = 'https://en.wikipedia.org/wiki/';
+    const wikiCommonsURL = 'https://commons.wikimedia.org/wiki/';
     const churchnearyou = properties.churchnearyouID ? churchNearYouURL + properties.churchnearyouID : null;
     const britishListedBuilding = properties.britishListedBuildingID ? britishListedBuildingURL + properties.britishListedBuildingID : null;
-    const wikidata = properties.wikidataID ? wikidataURL + properties.wikidataID : null;
-    const historicengland = properties.List_entry_number ? historicenglandURL + properties.List_entry_number : null;
-    const churchnearyouLabel = properties.churchnearyouID ? 'A Church Near You' : null;
-    const britishListedBuildingLabel = properties.britishListedBuildingID ? 'British Listed Building' : null;
-    const wikidataLabel = properties.wikidataID ? 'Wikidata' : null;
-    const historicenglandLabel = properties.List_entry_number ? 'Historic England' : null;
+    const wikidata = properties.wikidata ? wikidataURL + properties.wikidata : null;
+    const historicengland = properties.list_entry_number ? historicenglandURL + properties.list_entry_number : null;
+    const churchnearyouLabel = properties.churchnearyouID ? 'A Church Near You entry ' + properties.churchnearyouID : null;
+    const britishListedBuildingLabel = properties.britishListedBuildingID ? 'British Listed Building entry ' + properties.britishListedBuildingID : null;
+    const wikidataLabel = properties.wikidata ? 'Wikidata entity ' + properties.wikidata : null;
+    const wikicommonsCategory = properties.wikicommonsCategoryID ? wikiCommonsURL + properties.wikicommonsCategoryID : null;
+    const wikipediaEN = properties.wikipediaENID ? wikipediaENURL + properties.wikipediaENID : null;    
+    const historicenglandLabel = properties.list_entry_number ? 'Historic England NHLE number ' + properties.list_entry_number : null;
     const churchnearyouType = 'seeAlso';
     const britishListedBuildingType = 'seeAlso';
     const wikidataType = 'seeAlso';
     const historicenglandType = 'seeAlso';
-   
+    const wikicommonsType = 'seeAlso';
+    const wikipediaType = 'seeAlso';
+    
+
     const links = [];
     
     if (churchnearyou && churchnearyou !== 'undefined') {
@@ -103,7 +145,23 @@ const getLinks = (properties) => {
             label: historicenglandLabel
         });
     }
+
+    if (wikicommonsCategory && wikicommonsCategory !== 'undefined') {
+        links.push({
+            identifier: wikicommonsCategory,
+            type: wikicommonsType,
+            label: 'Wikimedia Commons Category'
+        });
+    }
    
+    if (wikipediaEN && wikipediaEN !== 'undefined') {
+        links.push({
+            identifier: wikipediaEN,
+            type: wikipediaType,
+            label: 'Wikipedia (English)'
+        });
+    }
+
     const flatLinks = links.reduce((all, link) => {
         return {
             ...all,
@@ -139,10 +197,9 @@ const buildFeature = (record, place, lon, lat, row) => {
         
             ...getDepiction(row)
         ,
-        types: {
-            ...getType(row) 
-        },
-        ...getLinks(row)
+            ...getTypes(row) 
+        ,
+            ...getLinks(row)
         
     }
 }
@@ -156,38 +213,42 @@ const features = records.data.reduce((all, row) => {
     const lat = row['lat'];
     const lon = row['lon'];
     const source = row['url'];
-    const listEntryNumber = row['List_entry_number'];
-    const designatedSiteName = row['Designated_Site_Name'];
-    const heritageCategory = row['Heritage_Category'];
-    const localPlanningAuthority = row['Local_planning_authority'];
-    const siteType = row['Site_type'];
-    const siteSubType = row['Site_sub_type'];
-    const county = row['County'];   
-    const districtOrBorough = row['District_or_borough'];
-    const parish = row['Parish'];
-    const parliamentaryConstituency = row['Parliamentary_Constituency'];
-    const region = row['Region'];
-    const assessmentType = row['Assessment_Type'];
-    const condition = row['Condition'];
-    const principalVunerability = row['Principal_Vunerability'];
-    const trend = row['Trend'];
-    const ownership = row['Ownership'];
-    const unitaryAuthority = row['Unitary_Authority'];
-    const buildingName = row['Building_name'];
-    const occupancyOrUse = row['Occupancy_or_use'];
-    const priority = row['Priority'];
-    const priorityComment = row['Priority_comment'];
-    const previousPriority = row['Previous_priority']; 
-    const designation = row['Designation'];
-    const locality = row['Locality'];
-    const listEntryNumbers = row['List_entry_numbers'];
-    const nationalPark = row['National_park'];
-    const streetName = row['Street_name'];
-    const vulnerability = row['Vulnerability'];
+    const listEntryNumber = row['list_entry_number'];
+    const designatedSiteName = row['designated_site_name'];
+    const heritageCategory = row['heritage_category'];
+    const localPlanningAuthority = row['local_planning_authority'];
+    const siteType = row['site_type'];
+    const siteSubType = row['site_sub_type'];
+    const county = row['county'];   
+    const districtOrBorough = row['district_or_borough'];
+    const parish = row['parish'];
+    const parliamentaryConstituency = row['parliamentary_constituency'];
+    const region = row['region'];
+    const assessmentType = row['assessment_type'];
+    const condition = row['condition'];
+    const principalVunerability = row['principal_vunerability'];
+    const trend = row['trend'];
+    const ownership = row['ownership'];
+    const unitaryAuthority = row['unitary_authority'];
+    const buildingName = row['building_name'];
+    const occupancyOrUse = row['occupancy_or_use'];
+    const priority = row['priority'];
+    const priorityComment = row['priority_comment'];
+    const previousPriority = row['previous_priority']; 
+    const designation = row['designation'];
+    const locality = row['locality'];
+    const listEntryNumbers = row['list_entry_numbers'];
+    const nationalPark = row['national_park'];
+    const streetName = row['street_name'];
+    const vulnerability = row['vulnerability'];
     const endDate = row['end_date'];
     const entity = row['entity'];
     const entryDate = row['entry_date'];
     const list_start_date = row['list_start_date'];
+    const wikicommonsCategoryID = row['wikicommonsCategoryID'];
+    const wikipediaENID = row['wikipediaENID'];
+    const wikidataEntityID = row['wikidataEntityID'];
+    const wikiInstanceOf = row['wikiInstanceOf'];
 
 
     const place = county;
@@ -267,7 +328,11 @@ const features = records.data.reduce((all, row) => {
             endDate: endDate,
             entity: entity,
             entryDate: entryDate,
-            yearListed: yearListed
+            yearListed: yearListed,
+            wikicommonsCategoryID: wikicommonsCategoryID,
+            wikipediaENID: wikipediaENID,
+            wikiInstanceOf: wikiInstanceOf,
+            wikidataEntityID: wikidataEntityID
         },
         descriptions: [{
             value: description
@@ -275,16 +340,17 @@ const features = records.data.reduce((all, row) => {
     };
     //console.log(peripleoRecord)
     const Link = listEntryNumber + '-HAR2024';
-
+   
     const features = Link?.trim() ? [
         buildFeature(peripleoRecord, place, lon, lat, row)
     ].filter(rec => rec) : [];
-
+   
     return [...all, ...features];
 }, []);
-
+const indexing = getIndexing();
 const fc = {
     type: 'FeatureCollection',
+    indexing,
     features
 };
 
