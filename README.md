@@ -19,29 +19,46 @@ The Heritage at Risk Mapping project aims to provide an interactive map that hig
 
 The data for this project is sourced from Historic England's Heritage at Risk Register. This register includes buildings, monuments, and other heritage assets that are at risk due to neglect, decay, or inappropriate development.
 
+## Getting raw data
+
+Within the scripts folder, a set of csv files and an ipynb are stored that demonstrate how to get the data for manipulation with Openrefine, where enrichment occurs via 
+reconciliation and various GREL functions. 
+
 ## Getting Started
 
 To get started with the project, follow these steps:
 
 1. Clone the repository:
-    ```bash
+```bash
     git clone https://github.com/yourusername/heritage-at-risk.git
-    ```
-2. Navigate to the project directory:
-    ```bash
+```
+2. Navigate to the project directory:  
+```bash
     cd heritage-at-risk
-    ```
-3. Install the necessary dependencies:
-    ```bash
+```
+3. Install the necessary dependencies:  
+```bash
     npm install
-    ```
+```
 4. This installs the node script dependencies for transforming CSV data that has been obtained from Historic England's opendata hub and transformed by the R scripts.
     ```bash
-    cd scripts 
-    node ./transform-har-lp.js
+        cd scripts 
+        node ./transform-har-lp.js
     ```
 
-The web application is served off github pages for free, using the docs folder. 
+The web application is served off github pages for free, using the docs folder.
+
+## Customised Peripleo
+
+The Peripleo instance used here has had a few enhancements/changes applied to it. I have changed the infocards, type rendering and links from the Linked Places GeoJSON and amended colours. Changes were made in the peripleo folder. To build the newer js file, I did the following:
+
+``` node
+    npm install
+    npm run build
+```
+
+Once built the files were copied to docs/js and I adapted the index.html file to point to these. 
+
 ## Contributing
 
 We welcome contributions to the project. If you have suggestions or improvements, please open an issue or submit a pull request.
