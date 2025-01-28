@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  Heritage at Risk and Peripleo data mining and
+  visualisation
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Daniel
+    family-names: Pett
+    email: dan.pett@westminster.org.uk
+    name-particle: Daniel
+    affiliation: Westminster School
+    orcid: 'https://orcid.org/0000-0002-0246-2335'
+repository-code: 'https://github.com/MicroPasts/heritage-at-risk/'
+url: 'https://heritage-at-risk.museologi.st'
+abstract: >-
+  This project uses Peripleo to map heritage at risk data
+  from Historic England and avoids the costs of using ESRI.
+  Peripleo is a powerful tool for visualizing and exploring
+  geospatial data, making it ideal for showcasing heritage
+  sites that are at risk. The repository contains raw data,
+  scripts, software and notebooks to demonstrate how to
+  replicate this project.
+keywords:
+  - geospatial
+  - visualisation
+  - R
+  - historic england
+license: MIT
