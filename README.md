@@ -4,7 +4,6 @@ This project uses Peripleo to map [heritage at risk data](https://historicenglan
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/bf334ad5-cdde-49ed-b0a3-424d8be6ba6e" />
 
-
 ## Overview
 
 The Heritage at Risk Mapping project aims to provide an interactive map that highlights heritage sites identified by Historic England as being at risk. This visualization helps in raising awareness and promoting efforts to preserve these important cultural landmarks.
@@ -17,12 +16,16 @@ The Heritage at Risk Mapping project aims to provide an interactive map that hig
 
 ## Data Source
 
-The data for this project is sourced from Historic England's Heritage at Risk Register. This register includes buildings, monuments, and other heritage assets that are at risk due to neglect, decay, or inappropriate development.
+The data for this project is sourced from Historic England's Heritage at Risk Register. This register includes buildings, monuments, and other heritage assets that are at risk due to neglect, decay, or inappropriate development. 
 
 ## Getting raw data
 
-Within the scripts folder, a set of csv files and an ipynb are stored that demonstrate how to get the data for manipulation with Openrefine, where enrichment occurs via 
-reconciliation and various GREL functions. 
+Within the [scripts](/scripts) folder, a single R file is available that generates the raw csv and scraped data from Historic England. An [ipython notebook](/notebooks/harPeripleo.ipynb) using an R kernel walks you through this and provides access to [raw csv files](/notebooks/csv/), the [merged data](/notebooks/merged/) and finally the data ready to use in [openrefine](/notebooks/final/openrefineHAR.csv). 
+
+## Openrefine
+
+The final data set from the HE website is then manipulated via the use of Openrefine, and a list of the commands used to manipulate data is available in the [tutorial folder](/tutorial/openrefine-commands.md). 
+ 
 
 ## Getting Started
 

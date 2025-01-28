@@ -1,0 +1,3310 @@
+[
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "designated_site_name",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column designated_site_name using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column heritage_category using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "local_planning_authority",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column local_planning_authority using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_type",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column site_type using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column site_sub_type using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "county",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column county using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "district_or_borough",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column district_or_borough using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "parish",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column parish using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "parliamentary_constituency",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column parliamentary_constituency using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "region",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column region using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "assessment_type",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column assessment_type using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "condition",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column condition using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "ownership",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column ownership using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "unitary_authority",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Unitary Authority using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "building_name",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Building name using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "priority_comment",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Priority comment using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "priority",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Priority using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "previous_priority",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Previous priority using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "designation",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Designation using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "locality",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Locality using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "list_entry_numbers",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column List entry numbers using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "street_name",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column Street name using expression value.trim()"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column name using expression value.trim()"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column site_sub_type to type null"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "building_name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q839954",
+          "name": "archaeological site"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "entity",
+            "propertyName": "National Heritage List for England number",
+            "propertyID": "P1216"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column Building name to type Q839954"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "building_name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://geocollider-sinatra.herokuapp.com/reconcile",
+        "identifierSpace": "https://pleiades.stoa.org/places/vocab#",
+        "schemaSpace": "https://pleiades.stoa.org/places/",
+        "type": {
+          "id": "Place",
+          "name": "Pleiades Place"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column Building name to type Place"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q219538",
+          "name": "scheduled monument"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column heritage_category to type Q219538"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q30634609",
+          "name": "heritage designation"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column heritage_category to type Q30634609"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "heritage_category: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "heritage_category",
+            "from": 50,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "similarValue": "Listed Building grade II*",
+      "judgment": "matched",
+      "match": {
+        "id": "Q15700831",
+        "name": "Grade II* listed building",
+        "types": [
+          "Q30634609"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Grade II* listed building (Q15700831) for cells containing \"Listed Building grade II*\" in column heritage_category"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "heritage_category: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "heritage_category",
+            "from": 50,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "similarValue": "Conservation Area",
+      "judgment": "matched",
+      "match": {
+        "id": "Q936257",
+        "name": "conservation area",
+        "types": [
+          ""
+        ],
+        "score": 50
+      },
+      "shareNewTopics": false,
+      "description": "Match item conservation area (Q936257) for cells containing \"Conservation Area\" in column heritage_category"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "heritage_category: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "heritage_category",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "similarValue": "Listed Building grade II*",
+      "judgment": "matched",
+      "match": {
+        "id": "Q15700831",
+        "name": "Grade II* listed building",
+        "types": [
+          "Q30634609"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Grade II* listed building (Q15700831) for cells containing \"Listed Building grade II*\" in column heritage_category"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "heritage_category: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "heritage_category",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "similarValue": "Listed Building grade II",
+      "judgment": "matched",
+      "match": {
+        "id": "Q15700831",
+        "name": "Grade II* listed building",
+        "types": [
+          "Q30634609"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Grade II* listed building (Q15700831) for cells containing \"Listed Building grade II\" in column heritage_category"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "heritage_category: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "heritage_category",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "heritage_category",
+      "similarValue": "Registered Battlefield",
+      "judgment": "matched",
+      "match": {
+        "id": "Q7309375",
+        "name": "Registered Battlefield",
+        "types": [
+          ""
+        ],
+        "score": 50
+      },
+      "shareNewTopics": false,
+      "description": "Match item Registered Battlefield (Q7309375) for cells containing \"Registered Battlefield\" in column heritage_category"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "designated_site_name",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column designated_site_name using expression value.trim()"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Church",
+      "judgment": "matched",
+      "match": {
+        "id": "Q16970",
+        "name": "church building",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item church building (Q16970) for cells containing \"Church\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Synagogue",
+      "judgment": "matched",
+      "match": {
+        "id": "Q34627",
+        "name": "synagogue",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item synagogue (Q34627) for cells containing \"Synagogue\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Country house",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1343246",
+        "name": "English country house",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item English country house (Q1343246) for cells containing \"Country house\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Hotel",
+      "judgment": "matched",
+      "match": {
+        "id": "Q27686",
+        "name": "hotel",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item hotel (Q27686) for cells containing \"Hotel\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Garden building",
+      "judgment": "matched",
+      "match": {
+        "id": "Q5522364",
+        "name": "garden building",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item garden building (Q5522364) for cells containing \"Garden building\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Public building",
+      "judgment": "matched",
+      "match": {
+        "id": "Q294422",
+        "name": "public building",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item public building (Q294422) for cells containing \"Public building\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "College",
+      "judgment": "matched",
+      "match": {
+        "id": "Q189004",
+        "name": "college",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item college (Q189004) for cells containing \"College\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Chapel",
+      "judgment": "matched",
+      "match": {
+        "id": "Q108325",
+        "name": "chapel",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item chapel (Q108325) for cells containing \"Chapel\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Cemetery",
+      "judgment": "matched",
+      "match": {
+        "id": "Q39614",
+        "name": "cemetery",
+        "types": [
+          "Q618123",
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item cemetery (Q39614) for cells containing \"Cemetery\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Residential building",
+      "judgment": "matched",
+      "match": {
+        "id": "Q11755880",
+        "name": "residential building",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item residential building (Q11755880) for cells containing \"Residential building\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Industrial building",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1662011",
+        "name": "industrial building",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item industrial building (Q1662011) for cells containing \"Industrial building\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Water feature",
+      "judgment": "matched",
+      "match": {
+        "id": "Q2736507",
+        "name": "water feature",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item water feature (Q2736507) for cells containing \"Water feature\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Fortified house",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1408475",
+        "name": "fortified house",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item fortified house (Q1408475) for cells containing \"Fortified house\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Rock Art",
+                  "l": "Rock Art"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Rock Art",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1211146",
+        "name": "rock art",
+        "types": [
+          "Q1792379"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item rock art (Q1211146) for cells containing \"Rock Art\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Wreck",
+                  "l": "Wreck"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Wreck",
+      "judgment": "matched",
+      "match": {
+        "id": "Q852190",
+        "name": "shipwreck",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item shipwreck (Q852190) for cells containing \"Wreck\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Temple",
+                  "l": "Temple"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Temple",
+      "judgment": "matched",
+      "match": {
+        "id": "Q44539",
+        "name": "temple",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item temple (Q44539) for cells containing \"Temple\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Shop",
+                  "l": "Shop"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Shop",
+      "judgment": "matched",
+      "match": {
+        "id": "Q213441",
+        "name": "shop",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item shop (Q213441) for cells containing \"Shop\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Settlement",
+                  "l": "Settlement"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Settlement",
+      "judgment": "matched",
+      "match": {
+        "id": "Q486972",
+        "name": "human settlement",
+        "types": [
+          "Q104086571"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item human settlement (Q486972) for cells containing \"Settlement\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Park",
+                  "l": "Park"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Park",
+      "judgment": "matched",
+      "match": {
+        "id": "Q22698",
+        "name": "park",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item park (Q22698) for cells containing \"Park\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Office",
+                  "l": "Office"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Office",
+      "judgment": "matched",
+      "match": {
+        "id": "Q182060",
+        "name": "office",
+        "types": [
+          "Q21146257"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item office (Q182060) for cells containing \"Office\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Navigation aid",
+                  "l": "Navigation aid"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Navigation aid",
+      "judgment": "matched",
+      "match": {
+        "id": "Q3565782",
+        "name": "navigational aid",
+        "types": [
+          ""
+        ],
+        "score": 93
+      },
+      "shareNewTopics": false,
+      "description": "Match item navigational aid (Q3565782) for cells containing \"Navigation aid\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Landscape park",
+                  "l": "Landscape park"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Landscape park",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1803820",
+        "name": "landscape park",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item landscape park (Q1803820) for cells containing \"Landscape park\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Kiln",
+                  "l": "Kiln"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Kiln",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1724341",
+        "name": "kiln",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item kiln (Q1724341) for cells containing \"Kiln\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Hospital",
+                  "l": "Hospital"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Hospital",
+      "judgment": "matched",
+      "match": {
+        "id": "Q180370",
+        "name": "hospital",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item hospital (Q180370) for cells containing \"Hospital\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Hillfort",
+                  "l": "Hillfort"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Hillfort",
+      "judgment": "matched",
+      "match": {
+        "id": "Q744099",
+        "name": "hillfort",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item hillfort (Q744099) for cells containing \"Hillfort\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Grave",
+                  "l": "Grave"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Grave",
+      "judgment": "matched",
+      "match": {
+        "id": "Q173387",
+        "name": "grave",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item grave (Q173387) for cells containing \"Grave\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Farm building",
+                  "l": "Farm building"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Farm building",
+      "judgment": "matched",
+      "match": {
+        "id": "Q10480682",
+        "name": "agricultural structure",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item agricultural structure (Q10480682) for cells containing \"Farm building\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Dovecote",
+                  "l": "Dovecote"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Dovecote",
+      "judgment": "matched",
+      "match": {
+        "id": "Q948878",
+        "name": "dovecote",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item dovecote (Q948878) for cells containing \"Dovecote\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Cross",
+                  "l": "Cross"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Cross",
+      "judgment": "matched",
+      "match": {
+        "id": "Q40843",
+        "name": "cross",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item cross (Q40843) for cells containing \"Cross\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Cathedral",
+                  "l": "Cathedral"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Cathedral",
+      "judgment": "matched",
+      "match": {
+        "id": "Q2977",
+        "name": "cathedral",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item cathedral (Q2977) for cells containing \"Cathedral\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Castle",
+                  "l": "Castle"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Castle",
+      "judgment": "matched",
+      "match": {
+        "id": "Q23413",
+        "name": "castle",
+        "types": [
+          "Q811102"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item castle (Q23413) for cells containing \"Castle\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Bridge",
+                  "l": "Bridge"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Bridge",
+      "judgment": "matched",
+      "match": {
+        "id": "Q12280",
+        "name": "bridge",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item bridge (Q12280) for cells containing \"Bridge\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Battery",
+                  "l": "Battery"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Battery",
+      "judgment": "matched",
+      "match": {
+        "id": "Q240313",
+        "name": "battery",
+        "types": [
+          "Q23905071"
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item battery (Q240313) for cells containing \"Battery\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Barrow",
+      "judgment": "matched",
+      "match": {
+        "id": "Q5737",
+        "name": "burial mound",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item burial mound (Q5737) for cells containing \"Barrow\" in column site_sub_type"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_type",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q13442814",
+          "name": "scholarly article"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column site_type to type Q13442814"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "heritage_category",
+      "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidata_entity",
+      "columnInsertIndex": 3,
+      "description": "Create column wikidata_entity at index 3 based on column heritage_category using expression if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "site_sub_type",
+      "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidata_sitetype",
+      "columnInsertIndex": 8,
+      "description": "Create column wikidata_sitetype at index 8 based on column site_sub_type using expression if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "List entry number",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q6973052",
+          "name": "National Heritage List for England"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column List entry number to type Q6973052"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "List entry number",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q30634609",
+          "name": "heritage designation"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "url",
+            "propertyName": "National Heritage List for England number",
+            "propertyID": "P1216"
+          },
+          {
+            "column": "designated_site_name",
+            "propertyName": "name",
+            "propertyID": "P2561"
+          }
+        ],
+        "limit": 4
+      },
+      "description": "Reconcile cells in column List entry number to type Q30634609"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "designated_site_name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q82799",
+          "name": "name"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "List entry number",
+            "propertyName": "National Heritage List for England number",
+            "propertyID": "P1216"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column designated_site_name to type Q82799"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q35120",
+          "name": "entity"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "List entry number",
+            "propertyName": "National Heritage List for England number",
+            "propertyID": "P1216"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column name to type Q35120"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "site_sub_type",
+            "expression": "value",
+            "columnName": "site_sub_type",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Barrow",
+                  "l": "Barrow"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "name",
+      "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+      "onError": "set-to-blank",
+      "newColumnName": "wiki_hmm",
+      "columnInsertIndex": 38,
+      "description": "Create column wiki_hmm at index 38 based on column name using expression if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "wiki_hmm",
+      "newColumnName": "wikidata_place_entity",
+      "description": "Rename column wiki_hmm to wikidata_place_entity"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "site_sub_type",
+      "similarValue": "Mill",
+      "judgment": "matched",
+      "match": {
+        "id": "Q83405",
+        "name": "factory",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item factory (Q83405) for cells containing \"Mill\" in column site_sub_type"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "designated_site_name",
+      "expression": "value.toTitlecase()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column designated_site_name using expression value.toTitlecase()"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "wikidata_entity",
+      "description": "Remove column wikidata_entity"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_entity",
+            "expression": "value",
+            "columnName": "wikidata_entity",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "https://www.wikidata.org/wiki/Q219538",
+                  "l": "https://www.wikidata.org/wiki/Q219538"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "heritage_category",
+      "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidata_entity_type",
+      "columnInsertIndex": 3,
+      "description": "Create column wikidata_entity_type at index 3 based on column heritage_category using expression if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_entity",
+            "expression": "value",
+            "columnName": "wikidata_entity",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "https://www.wikidata.org/wiki/Q219538",
+                  "l": "https://www.wikidata.org/wiki/Q219538"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q16970",
+          "name": "church building"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "List entry number",
+            "propertyName": "National Heritage List for England number",
+            "propertyID": "P1216"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column name to type Q16970"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_entity",
+            "expression": "value",
+            "columnName": "wikidata_entity",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "https://www.wikidata.org/wiki/Q219538",
+                  "l": "https://www.wikidata.org/wiki/Q219538"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "name",
+      "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+      "onError": "set-to-blank",
+      "newColumnName": "church_wikidata",
+      "columnInsertIndex": 38,
+      "description": "Create column church_wikidata at index 38 based on column name using expression if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    },
+    {
+      "op": "core/column-move",
+      "columnName": "List entry number",
+      "index": 41,
+      "description": "Move column List entry number to position 41"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_entity",
+            "expression": "value",
+            "columnName": "wikidata_entity",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "https://www.wikidata.org/wiki/Q219538",
+                  "l": "https://www.wikidata.org/wiki/Q219538"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q35120",
+          "name": "entity"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "List entry number",
+            "propertyName": "National Heritage List for England number",
+            "propertyID": "P1216"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column name to type Q35120"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_entity",
+            "expression": "value",
+            "columnName": "wikidata_entity",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "https://www.wikidata.org/wiki/Q219538",
+                  "l": "https://www.wikidata.org/wiki/Q219538"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "baseColumnName": "name",
+      "expression": "if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidata_test_data",
+      "columnInsertIndex": 37,
+      "description": "Create column wikidata_test_data at index 37 based on column name using expression if(cell.recon.match!=null,\"https://www.wikidata.org/wiki/{{id}}\".replace(\"{{id}}\",escape(cell.recon.match.id,\"url\")),null)"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "wikidata_entity",
+            "expression": "value",
+            "columnName": "wikidata_entity",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "https://www.wikidata.org/wiki/Q219538",
+                  "l": "https://www.wikidata.org/wiki/Q219538"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "similarValue": "Duxford Airfield, Duxford/Whittlesford",
+      "judgment": "matched",
+      "match": {
+        "id": "Q2317425",
+        "name": "Duxford Aerodrome",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Duxford Aerodrome (Q2317425) for cells containing \"Duxford Airfield, Duxford/Whittlesford\" in column name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "similarValue": "St George's, Doncaster",
+      "judgment": "matched",
+      "match": {
+        "id": "Q119147426",
+        "name": "St George's Church, Doncaster, South Yorkshire",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item St George's Church, Doncaster, South Yorkshire (Q119147426) for cells containing \"St George's, Doncaster\" in column name"
+    },
+    {
+      "op": "core/recon-judge-similar-cells",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "name",
+      "similarValue": "Hambledon, Winchester (District)",
+      "judgment": "matched",
+      "match": {
+        "id": "Q1150285",
+        "name": "Hambledon",
+        "types": [
+          ""
+        ],
+        "score": 100
+      },
+      "shareNewTopics": false,
+      "description": "Match item Hambledon (Q1150285) for cells containing \"Hambledon, Winchester (District)\" in column name"
+    },
+    {
+      "op": "core/column-addition-by-fetching-urls",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_test_data",
+      "urlExpression": "grel:value",
+      "onError": "set-to-blank",
+      "newColumnName": "wikidataJson",
+      "columnInsertIndex": 38,
+      "delay": 500,
+      "cacheResponses": true,
+      "httpHeadersJson": [
+        {
+          "name": "authorization",
+          "value": ""
+        },
+        {
+          "name": "if-modified-since",
+          "value": ""
+        },
+        {
+          "name": "accept-language",
+          "value": ""
+        },
+        {
+          "name": "accept-encoding",
+          "value": ""
+        },
+        {
+          "name": "user-agent",
+          "value": "OpenRefine 3.8.7 [TRUNK]"
+        },
+        {
+          "name": "accept",
+          "value": "*/*"
+        },
+        {
+          "name": "accept-charset",
+          "value": ""
+        }
+      ],
+      "description": "Create column wikidataJson at index 38 by fetching URLs based on column wikidata_test_data using expression grel:value"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "wikidataJson",
+      "description": "Remove column wikidataJson"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "name",
+      "expression": "cell.recon.match.id",
+      "onError": "set-to-blank",
+      "newColumnName": "ids",
+      "columnInsertIndex": 37,
+      "description": "Create column ids at index 37 based on column name using expression cell.recon.match.id"
+    },
+    {
+      "op": "core/column-addition-by-fetching-urls",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "ids",
+      "urlExpression": "grel:'https://www.wikidata.org/wiki/Special:EntityData/' + value + '.json'",
+      "onError": "store-error",
+      "newColumnName": "wikidata_json",
+      "columnInsertIndex": 38,
+      "delay": 200,
+      "cacheResponses": true,
+      "httpHeadersJson": [
+        {
+          "name": "authorization",
+          "value": ""
+        },
+        {
+          "name": "if-modified-since",
+          "value": ""
+        },
+        {
+          "name": "accept-language",
+          "value": ""
+        },
+        {
+          "name": "accept-encoding",
+          "value": ""
+        },
+        {
+          "name": "user-agent",
+          "value": "OpenRefine 3.8.7 [TRUNK]"
+        },
+        {
+          "name": "accept",
+          "value": "*/*"
+        },
+        {
+          "name": "accept-charset",
+          "value": ""
+        }
+      ],
+      "description": "Create column wikidata_json at index 38 by fetching URLs based on column ids using expression grel:'https://www.wikidata.org/wiki/Special:EntityData/' + value + '.json'"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_place_entity",
+      "expression": "grel:replace(value, 'https://www.wikidata.org/wiki/','')",
+      "onError": "set-to-blank",
+      "newColumnName": "replaced_url",
+      "columnInsertIndex": 42,
+      "description": "Create column replaced_url at index 42 based on column wikidata_place_entity using expression grel:replace(value, 'https://www.wikidata.org/wiki/','')"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P18'][0]['mainsnak']['datavalue'].value",
+      "onError": "set-to-blank",
+      "newColumnName": "image_path_commons",
+      "columnInsertIndex": 39,
+      "description": "Create column image_path_commons at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P18'][0]['mainsnak']['datavalue'].value"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P1435'][0]['qualifiers']['P580'][0].datavalue.value.time",
+      "onError": "set-to-blank",
+      "newColumnName": "list_start_date",
+      "columnInsertIndex": 39,
+      "description": "Create column list_start_date at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P1435'][0]['qualifiers']['P580'][0].datavalue.value.time"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P5464'][0]['mainsnak'].datavalue.value",
+      "onError": "set-to-blank",
+      "newColumnName": "churchnearyouID",
+      "columnInsertIndex": 39,
+      "description": "Create column churchnearyouID at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P5464'][0]['mainsnak'].datavalue.value"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P12485'][0]['mainsnak'].datavalue.value",
+      "onError": "set-to-blank",
+      "newColumnName": "britishListedBuildingID",
+      "columnInsertIndex": 39,
+      "description": "Create column britishListedBuildingID at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P12485'][0]['mainsnak'].datavalue.value"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:substring(value.parseJson()['entities'][cells['ids'].value]['claims']['P18'][0]['mainsnak']['hash'],0,2)",
+      "onError": "set-to-blank",
+      "newColumnName": "hashImagePath",
+      "columnInsertIndex": 39,
+      "description": "Create column hashImagePath at index 39 based on column wikidata_json using expression grel:substring(value.parseJson()['entities'][cells['ids'].value]['claims']['P18'][0]['mainsnak']['hash'],0,2)"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P31'][0]['mainsnak'].datavalue.value.id",
+      "onError": "set-to-blank",
+      "newColumnName": "wikiInstanceOf",
+      "columnInsertIndex": 39,
+      "description": "Create column wikiInstanceOf at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['claims']['P31'][0]['mainsnak'].datavalue.value.id"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "hashImagePath",
+      "expression": "grel:substring(value,0,1)",
+      "onError": "set-to-blank",
+      "newColumnName": "folder",
+      "columnInsertIndex": 41,
+      "description": "Create column folder at index 41 based on column hashImagePath using expression grel:substring(value,0,1)"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "hashImagePath",
+      "description": "Remove column hashImagePath"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "folder",
+      "description": "Remove column folder"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "list_start_date",
+      "expression": "grel:replace(value, '+','')",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column list_start_date using expression grel:replace(value, '+','')"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "list_start_date",
+      "expression": "grel:replace(value,'T00:00:00Z','')",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column list_start_date using expression grel:replace(value,'T00:00:00Z','')"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['sitelinks']['commonswiki']['url']",
+      "onError": "set-to-blank",
+      "newColumnName": "wikicommonsID",
+      "columnInsertIndex": 39,
+      "description": "Create column wikicommonsID at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['sitelinks']['commonswiki']['url']"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "wikidata_json",
+      "expression": "grel:value.parseJson()['entities'][cells['ids'].value]['sitelinks']['enwiki']['url']",
+      "onError": "set-to-blank",
+      "newColumnName": "wikipediaID",
+      "columnInsertIndex": 39,
+      "description": "Create column wikipediaID at index 39 based on column wikidata_json using expression grel:value.parseJson()['entities'][cells['ids'].value]['sitelinks']['enwiki']['url']"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "wikipediaID",
+      "expression": "grel:replace(value,'https://en.wikipedia.org/wiki/','')",
+      "onError": "set-to-blank",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column wikipediaID using expression grel:replace(value,'https://en.wikipedia.org/wiki/','')"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "wikicommonsID",
+      "expression": "grel:replace(value,'https://commons.wikimedia.org/wiki/','')",
+      "onError": "set-to-blank",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column wikicommonsID using expression grel:replace(value,'https://commons.wikimedia.org/wiki/','')"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "wikidata_place_entity",
+      "description": "Remove column wikidata_place_entity"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "replaced_url",
+      "description": "Remove column replaced_url"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "wikidata_test_data",
+      "description": "Remove column wikidata_test_data"
+    },
+    {
+      "op": "core/column-removal",
+      "columnName": "church_wikidata",
+      "description": "Remove column church_wikidata"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "wikicommonsID",
+      "newColumnName": "wikicommonsCategoryID",
+      "description": "Rename column wikicommonsID to wikicommonsCategoryID"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "wikipediaID",
+      "newColumnName": "wikipediaENID",
+      "description": "Rename column wikipediaID to wikipediaENID"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "wikidata_entity_type",
+      "expression": "grel:replace(value,'https://www.wikidata.org/wiki/','')",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column wikidata_entity_type using expression grel:replace(value,'https://www.wikidata.org/wiki/','')"
+    },
+    {
+      "op": "core/column-rename",
+      "oldColumnName": "ids",
+      "newColumnName": "wikidata",
+      "description": "Rename column ids to wikidata"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "site_sub_type",
+      "expression": "cell.recon.match.id",
+      "onError": "set-to-blank",
+      "newColumnName": "wikiSubType",
+      "columnInsertIndex": 7,
+      "description": "Create column wikiSubType at index 7 based on column site_sub_type using expression cell.recon.match.id"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "lat",
+      "expression": "grel:value + ',' + cells['lon'].value",
+      "onError": "set-to-blank",
+      "newColumnName": "latLon",
+      "columnInsertIndex": 49,
+      "description": "Create column latLon at index 49 based on column lat using expression grel:value + ',' + cells['lon'].value"
+    },
+    {
+      "op": "core/text-transform",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "street_name",
+      "expression": "value.trim()",
+      "onError": "keep-original",
+      "repeat": false,
+      "repeatCount": 10,
+      "description": "Text transform on cells in column street_name using expression value.trim()"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "columnName": "ownership",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q35120",
+          "name": "entity"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column ownership to type Q35120"
+    },
+    {
+      "op": "core/column-addition",
+      "engineConfig": {
+        "facets": [],
+        "mode": "row-based"
+      },
+      "baseColumnName": "ownership",
+      "expression": "cell.recon.match.id",
+      "onError": "set-to-blank",
+      "newColumnName": "orgWikiData",
+      "columnInsertIndex": 19,
+      "description": "Create column orgWikiData at index 19 based on column ownership using expression cell.recon.match.id"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "site_type",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://wikidata.reconci.link/en/api",
+        "identifierSpace": "http://www.wikidata.org/entity/",
+        "schemaSpace": "http://www.wikidata.org/prop/direct/",
+        "type": {
+          "id": "Q35120",
+          "name": "entity"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column site_type to type Q35120"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "latLon",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://termennetwerk-api.netwerkdigitaalerfgoed.nl/reconcile/https://demo.netwerkdigitaalerfgoed.nl/geonames",
+        "identifierSpace": "https://www.geonames.org/",
+        "schemaSpace": "http://www.w3.org/2004/02/skos/core#Concept",
+        "type": {
+          "id": "http://www.w3.org/2004/02/skos/core#Concept",
+          "name": "Concept"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column latLon to type http://www.w3.org/2004/02/skos/core#Concept"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "latLon",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://fornpunkt.se/apis/reconciliation/geonames",
+        "identifierSpace": "https://www.geonames.org/",
+        "schemaSpace": "http://www.geonames.org/ontology#Feature",
+        "type": {
+          "id": "http://www.geonames.org/ontology#Feature",
+          "name": "Feature"
+        },
+        "autoMatch": true,
+        "batchSize": 50,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column latLon to type http://www.geonames.org/ontology#Feature"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "parish",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://fornpunkt.se/apis/reconciliation/geonames",
+        "identifierSpace": "https://www.geonames.org/",
+        "schemaSpace": "http://www.geonames.org/ontology#Feature",
+        "type": {
+          "id": "Concept",
+          "name": "Concept"
+        },
+        "autoMatch": true,
+        "batchSize": 50,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column parish to type Concept"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "parish",
+      "config": {
+        "mode": "standard-service",
+        "service": "http://localhost:5000/reconcile",
+        "identifierSpace": "http://localhost/identifier",
+        "schemaSpace": "http://localhost/schema",
+        "type": {
+          "id": "/geonames/name",
+          "name": "Place Name"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column parish to type /geonames/name"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          },
+          {
+            "type": "range",
+            "name": "parish: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "parish",
+            "from": 100,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "latLon",
+      "config": {
+        "mode": "standard-service",
+        "service": "http://localhost:5000/reconcile",
+        "identifierSpace": "http://localhost/identifier",
+        "schemaSpace": "http://localhost/schema",
+        "type": {
+          "id": "/geonames/name",
+          "name": "Place Name"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column latLon to type /geonames/name"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          },
+          {
+            "type": "range",
+            "name": "parish: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "parish",
+            "from": 100,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "latLon",
+      "config": {
+        "mode": "standard-service",
+        "service": "http://localhost:5000/reconcile",
+        "identifierSpace": "http://localhost/identifier",
+        "schemaSpace": "http://localhost/schema",
+        "type": {
+          "id": "/geonames/all",
+          "name": "All GeoNames terms"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column latLon to type /geonames/all"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "list",
+            "name": "ownership",
+            "expression": "value",
+            "columnName": "ownership",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "Charity (heritage)",
+                  "l": "Charity (heritage)"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          },
+          {
+            "type": "range",
+            "name": "parish: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "parish",
+            "from": 100,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "designated_site_name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://geocollider-sinatra.herokuapp.com/reconcile",
+        "identifierSpace": "https://pleiades.stoa.org/places/vocab#",
+        "schemaSpace": "https://pleiades.stoa.org/places/",
+        "type": {
+          "id": "Place",
+          "name": "Pleiades Place"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column designated_site_name to type Place"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "parish: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "parish",
+            "from": 100,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "designated_site_name",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://geocollider-sinatra.herokuapp.com/reconcile",
+        "identifierSpace": "https://pleiades.stoa.org/places/vocab#",
+        "schemaSpace": "https://pleiades.stoa.org/places/",
+        "type": {
+          "id": "Place",
+          "name": "Pleiades Place"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "lon",
+            "propertyName": "Longitude",
+            "propertyID": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+          },
+          {
+            "column": "lat",
+            "propertyName": "Latitude",
+            "propertyID": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column designated_site_name to type Place"
+    },
+    {
+      "op": "core/recon",
+      "engineConfig": {
+        "facets": [
+          {
+            "type": "range",
+            "name": "parish: best candidate's score",
+            "expression": "cell.recon.best.score",
+            "columnName": "parish",
+            "from": 100,
+            "to": 51,
+            "selectNumeric": true,
+            "selectNonNumeric": true,
+            "selectBlank": true,
+            "selectError": true
+          },
+          {
+            "type": "list",
+            "name": "designated_site_name: judgment",
+            "expression": "forNonBlank(cell.recon.judgment, v, v, if(isNonBlank(value), \"(unreconciled)\", \"(blank)\"))",
+            "columnName": "designated_site_name",
+            "invert": false,
+            "omitBlank": false,
+            "omitError": false,
+            "selection": [
+              {
+                "v": {
+                  "v": "none",
+                  "l": "none"
+                }
+              }
+            ],
+            "selectBlank": false,
+            "selectError": false
+          },
+          {
+            "type": "text",
+            "name": "designated_site_name",
+            "columnName": "designated_site_name",
+            "query": "roman",
+            "mode": "text",
+            "caseSensitive": false,
+            "invert": false
+          }
+        ],
+        "mode": "row-based"
+      },
+      "columnName": "latLon",
+      "config": {
+        "mode": "standard-service",
+        "service": "https://geocollider-sinatra.herokuapp.com/reconcile",
+        "identifierSpace": "https://pleiades.stoa.org/places/vocab#",
+        "schemaSpace": "https://pleiades.stoa.org/places/",
+        "type": {
+          "id": "Place",
+          "name": "Pleiades Place"
+        },
+        "autoMatch": true,
+        "batchSize": 10,
+        "columnDetails": [
+          {
+            "column": "lon",
+            "propertyName": "Longitude",
+            "propertyID": "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+          },
+          {
+            "column": "lat",
+            "propertyName": "Latitude",
+            "propertyID": "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+          }
+        ],
+        "limit": 0
+      },
+      "description": "Reconcile cells in column latLon to type Place"
+    }
+  ]
