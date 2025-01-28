@@ -24,8 +24,7 @@ Within the [scripts](/scripts) folder, a single R file is available that generat
 
 ## Openrefine
 
-The final data set from the HE website is then manipulated via the use of Openrefine, and a list of the commands used to manipulate data is available in the [tutorial folder](/tutorial/openrefine-commands.md). 
- 
+The final data set from the HE website is then manipulated via the use of Openrefine, and a formatted markdown table of the commands used to manipulate data is available in the [notebooks folder](/notebooks/openrefine-commands.md) which is created from an exported [openrefine json](/notebooks/openrefine/json/openrefine-commands.json) file (you can reuse this). 
 
 ## Getting Started
 
@@ -33,7 +32,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository:
 ```bash
-    git clone https://github.com/yourusername/heritage-at-risk.git
+    git clone https://github.com/micropasts/heritage-at-risk.git
 ```
 2. Navigate to the project directory:  
 ```bash
