@@ -172,59 +172,44 @@ For example, to extract the English Wikipedia URL from the JSON data:
 
 This process can be repeated with different GREL expressions to extract various pieces of information from the JSON data and store them in new columns.
 
-Extract english wikipedia URI from json:
+Extract *English wikipedia URI* from json:
 
-```
+```text
 value.parseJson()['entities'][cells['ids'].value]['sitelinks']['enwiki']['url']
 ```
 
-Extract wikicommons URI from json:
+Extract *wikicommons URI* from json:
 
-```
+```grel
 value.parseJson()['entities'][cells['ids'].value]['sitelinks']['commonswiki']['url']
 ```
 
-Extract P31 claim from json (instance of):
+Extract *P31 claim* from json (instance of):
 
-```
+```text
 value.parseJson()['entities'][cells['ids'].value]['claims']['P31'][0]['mainsnak'].datavalue.value.id
 ```
 
-Extract P18 claim from json (image file name): 
+Extract *P18 claim* from json (image file name): 
 
-```
+```text
 value.parseJson()['entities'][cells['ids'].value]['claims']['P31'][0]['mainsnak']['datavalue'].value
 ```
 
-Extract P12485 claim from json (British Listed Building ID):
+Extract *P12485 claim* from json (British Listed Building ID):
 
-```
+```text
 value.parseJson()['entities'][cells['ids'].value]['claims']['P12485'][0]['mainsnak'].datavalue.value
 ```
 
-Extract P5464 claim from json (A Church Near You church ID):
+Extract *P5464 claim* from json (A Church Near You church ID):
 
-```
+```text
 value.parseJson()['entities'][cells['ids'].value]['claims']['P5464'][0]['mainsnak'].datavalue.value
 ```
 
-Extract P580 claim from json (first listed or start time), create new column from URLS:
+Extract *P580 claim* from json (first listed or start time), create new column from URLS:
 
-```
+```text
 value.parseJson()['entities'][cells['ids'].value]['claims']['P1435'][0]['qualifiers']['P580'][0].datavalue.value.time
 ```
-
-export const getTypes = (node) => {
-  if (node.types?.length > 0)
-    return node.types.map(t => ({ label: t.label, identifier: t.identifier }));
-  else if (node.properties?.type)
-    return [{ label: node.properties.type, identifier: node.properties.identifier }];
-  else if (node.types?.length > 0)
-    return node.types.map(t => ({ label: t.label, identifier: t.identifier }));
-  else
-    return [];
-}
-
-  <p className="p6o-node-types">
-              {getTypes(node).join(', ')}
-            </p>

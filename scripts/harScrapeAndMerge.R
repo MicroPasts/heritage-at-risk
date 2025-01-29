@@ -1,5 +1,7 @@
-# Check if packages exist and if not install them for use
-packages <- c("readr","jsonlite")
+# This script checks if the required packages are installed and installs them if they are not.
+# It is used in the heritage-at-risk project to ensure that all necessary dependencies are available for the script to run.
+# 
+packages <- c("readr","jsonlite", "sf", "utils", "janitor", "rvest", "tidyverse", "stringr", "dplyr")
 any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
 if (any_not_installed) {
   # Code to execute if at least one package is not installed
@@ -10,11 +12,27 @@ if (any_not_installed) {
     install.packages(missing_packages)
   }
 } 
+
+# Create directory for storing CSV files
+if (!file.exists('C:/Users/dan.pett/heritage-at-risk/rawdata/csv')){
+  dir.create('C:/Users/dan.pett/heritage-at-risk/rawdata/csv')
+}
+# Create directory for storing final CSV data
+if (!file.exists('C:/Users/dan.pett/heritage-at-risk/rawdata/final')){
+  dir.create('C:/Users/dan.pett/heritage-at-risk/rawdata/final')
+}
+# Create directory for storing merged CSV data
+if (!file.exists('C:/Users/dan.pett/heritage-at-risk/rawdata/merged')){
+  dir.create('C:/Users/dan.pett/heritage-at-risk/rawdata/merged')
+}
+# Download data from the Digital Planning page in csv format
 library(readr)
 rawdata <- read.csv('https://files.planning.data.gov.uk/dataset/heritage-at-risk.csv')
 # Check the data you downloaded for structure
 head(rawdata)
-message(This gives you a dataset of 20 columns)
+cols <-  ncol(rawdata)
+message(paste0('This produces a data frame that is a ', cols , ' column data set'))
+
 # Define columns to drop
 drops <- c("organisation.entity","prefix", "categories", "legislation", "notes", "geometry", "geojson")
 # Drop the columns
@@ -24,8 +42,10 @@ names(rawDataCols)[names(rawDataCols) == "reference"] <- "ListEntry"
 
 # Test your data again
 head(rawDataCols)
-write_csv(rawDataCols, '../rawdata/HAR.csv')
-message('This produces a 13 column data set of HAR data')
+write_csv(rawDataCols, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/HAR.csv')
+cols <-  ncol(rawDataCols)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
+
 # Load the jsonlite library
 library(jsonlite)
 # Get the json response from the ARCVIEW server
@@ -38,10 +58,11 @@ countNHLE <- fromJSON('https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/r
 totalNHLE <- countNHLE$count[1]
 # Print this value
 message(paste0('The total number of NHLE listed buildings equals: ', totalNHLE))
-# We are going to get 1000 records at a time
+# We are going to get 50 records at a time
 recordsToReturn <- 50
 # We are going to paginate this response
 pagination <- ceiling(totalNHLE/recordsToReturn)
+message(paste0('Pages to download normally: ', pagination))
 # Obtain data from the ArcGIS feature server
 # The id for the server is ZOdPfBS3aqqDYPUQ
 # The FeatureServer is 0
@@ -65,21 +86,8 @@ for (i in seq(from=(1 * recordsToReturn), to=(pagination*recordsToReturn), by=re
   Sys.sleep(1.0)
 }
 head(data)
-
-message('This produces a data frame that is 7 column data set') 
-
-# Check if packages exist and if not install them for use
-packages <- c("sf", "utils")
-any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
-if (any_not_installed) {
-  # Code to execute if at least one package is not installed
-  message("At least one of the packages is not installed.")
-  # Install missing packages
-  missing_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
-  if (length(missing_packages) > 0) {
-    install.packages(missing_packages)
-  }
-} 
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
 library(utils)
 library(sf)
@@ -105,10 +113,11 @@ data$lon <- st_coordinates(wgs84_coords)[, "X"]
 
 # Print the head rows of the new data frame
 head(data)
-message('This produces a data frame that is 9 column data set') 
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
 # Write to a csv file 
-write_csv(data, '../rawdata/NHLE.csv')
+write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/NHLE.csv')
 
 # Load the jsonlite library
 library(jsonlite)
@@ -121,11 +130,12 @@ countNHLE_Monuments <- fromJSON('https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPU
 # Get the count
 totalScheduled <- countNHLE_Monuments$count[1]
 # Print this value
-message(totalScheduled)
-# We are going to get 1000 records at a time
-recordsToReturn <- 10
+message(paste0('Total number of scheduled monuments ', totalScheduled))
+# We are going to get 50 records at a time
+recordsToReturn <- 50
 # We are going to paginate this response
 pagination <- ceiling(totalScheduled/recordsToReturn)
+message(paste0('Pages to download normally: ', pagination))
 
 # Obtain data from the ArcGIS feature server - Scheduled monuments are layer 6
 url <- paste0("https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/arcgis/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/6/query?where=0%3D0&outFields=%2A&f=json&resultRecordCount=", recordsToReturn)
@@ -146,23 +156,11 @@ for (i in seq(from=(1 * recordsToReturn), to=(pagination*recordsToReturn), by=re
   # Add a snooze so we don't get blocked easily
   Sys.sleep(1.0)
 }
-data$grade <- NA
+data$Grade <- NA
 head(data)
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
-message('This produces a data frame that is 7 column data set') 
-
-# Check if packages exist and if not install them for use
-packages <- c("sf", "utils")
-any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
-if (any_not_installed) {
-  # Code to execute if at least one package is not installed
-  message("At least one of the packages is not installed.")
-  # Install missing packages
-  missing_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
-  if (length(missing_packages) > 0) {
-    install.packages(missing_packages)
-  }
-} 
 library(utils)
 library(sf)
 
@@ -187,10 +185,10 @@ data$lon <- st_coordinates(wgs84_coords)[, "X"]
 
 # Print the head rows of the new data frame
 head(data)
-message('This produces a data frame that is 9 column data set') 
-
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 # Write to a csv file 
-write_csv(data, '../rawdata/ScheduledMonuments.csv')
+write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/ScheduledMonuments.csv')
 
 # Load the jsonlite library
 library(jsonlite)
@@ -203,11 +201,12 @@ countNHLEParks <- fromJSON('https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/Arc
 # Get the count
 totalParks <- countNHLEParks$count[1]
 # Print this value
-head(totalParks)
-# We are going to get 10 records at a time
-recordsToReturn <- 10
+message(paste0('The total number of parks is ', totalParks))
+# We are going to get 50 records at a time
+recordsToReturn <- 50
 # We are going to paginate this response
 pagination <- ceiling(totalParks/recordsToReturn)
+message(paste0('Pages to download normally: ', pagination))
 
 # Obtain data from the ArcGIS feature server 
 url <- paste0("https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/arcgis/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/7/query?where=0%3D0&outFields=%2A&f=json&resultRecordCount=", recordsToReturn)
@@ -228,22 +227,12 @@ for (i in seq(from=(1 * recordsToReturn), to=(pagination*recordsToReturn), by=re
   # Add a snooze so we don't get blocked easily
   Sys.sleep(1.0)
 }
+# Check these data
 head(data)
 
-message('This produces a data frame that is 7 column data set') 
+# Print a message to tell you about the data frame
+message(paste0('This produces a data frame that is a ', ncol(data), ' column data set')) 
 
-# Check if packages exist and if not install them for use
-packages <- c("sf", "utils")
-any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
-if (any_not_installed) {
-  # Code to execute if at least one package is not installed
-  message("At least one of the packages is not installed.")
-  # Install missing packages
-  missing_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
-  if (length(missing_packages) > 0) {
-    install.packages(missing_packages)
-  }
-} 
 library(utils)
 library(sf)
 
@@ -268,11 +257,11 @@ data$lon <- st_coordinates(wgs84_coords)[, "X"]
 
 # Print the head rows of the new data frame
 head(data)
-message('This produces a data frame that is 9 column data set') 
-
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 # Write to a csv file 
-write_csv(data, '../rawdata/Parks.csv')
-message('These data have been written to Parks.csv') 
+write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Parks.csv')
+
 # Load the jsonlite library
 library(jsonlite)
 # Get the json response from the ARCVIEW server
@@ -284,13 +273,12 @@ countNHLEBattlefields <- fromJSON('https://services-eu1.arcgis.com/ZOdPfBS3aqqDY
 # Get the count
 totalBattles <- countNHLEBattlefields$count[1]
 # Print this value
-head(totalBattles)
-# We are going to get 10 records at a time
-recordsToReturn <- 10
+message(paste0('Total battlefield records available: ', totalBattles))
+# We are going to get 50 records at a time
+recordsToReturn <- 50
 # We are going to paginate this response
-pagination <- ceiling(totalParks/recordsToReturn)
-
-message(paste0('Pages to download: ', pagination))
+pagination <- ceiling(totalBattles/recordsToReturn)
+message(paste0('Pages to download normally: ', pagination))
 
 # Obtain data from the ArcGIS feature server - Battlefields are layer 8
 url <- paste0("https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/arcgis/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/8/query?where=0%3D0&outFields=%2A&f=json&resultRecordCount=", recordsToReturn)
@@ -313,21 +301,9 @@ for (i in seq(from=(1 * recordsToReturn), to=(pagination*recordsToReturn), by=re
 }
 data$Grade <- NA
 head(data)
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
-message('This produces a data frame that is 6 column data set') 
-
-# Check if packages exist and if not install them for use
-packages <- c("sf", "utils")
-any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
-if (any_not_installed) {
-  # Code to execute if at least one package is not installed
-  message("At least one of the packages is not installed.")
-  # Install missing packages
-  missing_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
-  if (length(missing_packages) > 0) {
-    install.packages(missing_packages)
-  }
-} 
 library(utils)
 library(sf)
 
@@ -352,57 +328,37 @@ data$lon <- st_coordinates(wgs84_coords)[, "X"]
 
 # Print the head rows of the new data frame
 head(data)
-message('This produces a data frame that is a 9 column data set') 
+cols <- ncol(data)
+message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
 # Write to a csv file 
-write_csv(data, '../rawdata/Battlefields.csv')
-message('These data have been written to Battlefields.csv') 
-
+write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Battlefields.csv')
 # Load necessary library
 library(dplyr)
 # Read the CSV files
-file0 <- read.csv("../rawdata/HAR.csv")
+file0 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/HAR.csv")
 head(file0)
-file1 <- read.csv("../rawdata/NHLE.csv")
+file1 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/NHLE.csv")
 head(file1)
-file2 <- read.csv("../rawdata/Battlefields.csv")
+file2 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Battlefields.csv")
 head(file2)
-file3 <- read.csv("../rawdata/Parks.csv")
+file3 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Parks.csv")
 head(file3)
-file4 <- read.csv("../rawdata/ScheduledMonuments.csv")
+file4 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/ScheduledMonuments.csv")
 head(file4)
 
 # Set the common column, which is always ListEntry
 common_column <- "ListEntry" 
+
 # Now start enriching by scraping
 # Filter file0 and join with NHLE
 common_rows_nhle <- merge(file0, file1, by = common_column) 
 head(common_rows_nhle)
-common_rows_battlefields <- merge(file0, file2, by = common_column) 
-head(common_rows_battlefields)
-common_rows_parks <- merge(file0, file3, by = common_column) 
-head(common_rows_parks)
-common_rows_scheduled <- merge(file0, file4, by = common_column) 
-head(common_rows_scheduled)
-
 library(dplyr)
 merged <- bind_rows(common_rows_scheduled, common_rows_parks, common_rows_battlefields, common_rows_nhle)
 names(merged)[names(merged) == "documentation.url"] <- "url"
 head(merged)
-write.csv(merged, "../rawdata/merged_har.csv", row.names = FALSE) 
-
-# Check if packages exist and if not install them for use
-packages <- c("rvest", "readr", "tidyverse", "stringr")
-any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
-if (any_not_installed) {
-  # Code to execute if at least one package is not installed
-  message("At least one of the packages is not installed.")
-  # Install missing packages
-  missing_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
-  if (length(missing_packages) > 0) {
-    install.packages(missing_packages)
-  }
-} 
+write.csv(merged, "C:/Users/dan.pett/heritage-at-risk/rawdata/merged/merged_har.csv", row.names = FALSE) 
 
 library(rvest)
 library(readr)
@@ -410,44 +366,40 @@ library(tidyverse)
 library(stringr)
 
 # Get the urls list from the previous CSV file created 
-urls <- read.csv("../rawdata/merged_har.csv")
-# Create an empty list to store the scraped data
-scraped_data <- list()
-# Loop through the list of urls.
-for (i in 1:nrow(urls)) {
-  url <- urls[i, 10] # Assuming the URLs are in the tenth column
-  reference <-urls[i,1] # Assuming the reference number is column 1
-  print(url)
-  print(reference)
-  # Use tryCatch to handle connection errors
+urls <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/merged/merged_har.csv")
+
+# Function to scrape data from a single URL
+scrape_url <- function(url, reference) {
   tryCatch({
     page <- read_html(url)
-    css_selector <- ".HARListEntry__bullets-container" # Replace with the actual CSS selector
-    
-    # Extract the text content from the specified CSS selector
-    #text_content <- page %>% html_nodes(css_selector) %>% html_text()
+    css_selector <- ".HARListEntry__bullets-container" 
     text_content <- page %>% 
       html_nodes(css_selector) %>% 
       html_text() %>% 
       paste(collapse = " ")
-
-    # Store the extracted data in the list
-    scraped_data[[i]] <- list(url = url, text_content = text_content)
-    # Remove the page object to free up memory
-    rm(page)
-    closeAllConnections()
-    # Run garbage collection to free up memory
-    gc()
+    
+    list(url = url, reference = reference, text_content = text_content) 
   }, error = function(e) {
-    # Handle the error (e.g., print a message and continue)
     message(sprintf("Failed to scrape %s: %s", url, e$message))
+    list(url = url, reference = reference, text_content = NA, error = e$message) 
   })
-  # Print the extracted text content
-  print(text_content)
-  Sys.sleep(0.5)
 }
-errors_df <- do.call(rbind, lapply(errors, as.data.frame))
-head(scraped_data_df)
+
+# Apply the scraping function to each row in the urls data frame using lapply
+scraped_data <- lapply(1:nrow(urls), function(i) {
+  scrape_url(urls[i, 10], urls[i, 1]) 
+})
+
+# Convert the list of lists to a data frame
+scraped_data_df <- bind_rows(scraped_data)
+
+# Separate successful and failed scrapes
+successful_scrapes <- scraped_data_df %>% filter(!is.na(text_content)) %>% select(-error)
+failed_scrapes <- scraped_data_df %>% filter(is.na(text_content))
+
+# Write failed results to CSV file
+write_csv(failed_scrapes, "C:/Users/dan.pett/heritage-at-risk/rawdata/csv/scraping_errors.csv") 
+# You might want these for reference.
 
 remove_text_before_location <- function(text) {
    heritage_index <- str_locate(text, "Heritage Category:")
@@ -458,18 +410,18 @@ remove_text_before_location <- function(text) {
   }
 }
 
-scraped_data_df <- scraped_data_df %>% 
+scraped_data_df <- successful_scrapes %>% 
   mutate(text_content = sapply(text_content, remove_text_before_location))
 head(scraped_data_df)
 
 # Write the scraped data to a new CSV file
-write_csv(scraped_data_df, "../rawdata/scraped_data.csv") 
+write_csv(scraped_data_df, "C:/Users/dan.pett/heritage-at-risk/rawdata/csv/scraped_data.csv") 
 
 # Tidyverse was installed previously. 
 library(tidyverse)
 
 # Read the CSV file
-df <- read_csv('scraped_data.csv', col_types = cols(.default = "c"))
+df <- read_csv('C:/Users/dan.pett/heritage-at-risk/rawdata/csv/scraped_data.csv', col_types = cols(.default = "c"))
 
 # Function to split text_content into key-value pairs
 split_text_content <- function(text) {
@@ -498,21 +450,45 @@ split_df <- bind_rows(split_data)
 # Combine the original URL column with the new data frame
 result_df <- bind_cols(df %>% select(url), split_df)
 head(result_df)
+cols <- ncol(result_df)
+message(paste0('This has created a scraped and enhanced dataset of ', cols, ' columns'))
+
 # Write the result to a new CSV file
-write_csv(result_df, '../rawdata/processed_scraped_data.csv')
+write_csv(result_df, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/processed_scraped_data.csv')
 
-# Load necessary library
+# Load necessary library installed previously
 library(dplyr)
-
+# Check if packages exist and if not install them for use
+packages <- c("janitor")
+any_not_installed <- !all(packages %in% installed.packages()[, "Package"])
+if (any_not_installed) {
+  # Code to execute if at least one package is not installed
+  message("At least one of the packages is not installed.")
+  # Install missing packages
+  missing_packages <- packages[!(packages %in% installed.packages()[, "Package"])]
+  if (length(missing_packages) > 0) {
+    install.packages(missing_packages)
+  }
+}
 # Read the CSV files
-file1 <- read.csv("../rawdata/processed_scraped_data.csv")
-file2 <- read.csv("../rawdata/merged_har.csv")
-common_column <- "url" # Replace with the actual column name
+file1 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/processed_scraped_data.csv")
+file2 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/merged/merged_har.csv")
+
+# Merge by the common column - url 
+common_column <- "url" 
 
 # Find common rows based on the common column
 common_rows <- merge(file1, file2, by = common_column)
+cols <- ncol(common_rows) 
 
+# Using janitor change column names to snake case (snake_case)
+library(janitor)
+common_rows <- clean_names(common_rows)
 
-# Print the common rows
+#Check these data 
 head(common_rows)
-write_csv(common_rows, '../rawdata/openrefineHAR.csv')
+
+# Write csv
+write_csv(common_rows, 'C:/Users/dan.pett/heritage-at-risk/rawdata/final/openrefineHAR.csv')
+message(paste0('You have now downloaded and enhanced the Heritage At Risk dataset with ', cols , 
+               ' columns - remember to change the pagination numbers for a full set')) 
