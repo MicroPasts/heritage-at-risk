@@ -1,5 +1,7 @@
 # Heritage at Risk Mapping
 
+[![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--0246--2335-green.svg)](http://orcid.org/0000-0002-0246-2335)
+
 This project uses Peripleo to map [heritage at risk data](https://historicengland.org.uk/advice/heritage-at-risk/) from [Historic England](https://historicengland.org.uk) and avoids the costs of using ESRI. Peripleo is a powerful tool for visualizing and exploring geospatial data, making it ideal for showcasing heritage sites that are at risk.
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/bf334ad5-cdde-49ed-b0a3-424d8be6ba6e" />
@@ -20,46 +22,20 @@ The data for this project is sourced from Historic England's Heritage at Risk Re
 
 ## Getting raw data
 
-Within the [scripts](/scripts) folder, a single R file is available that generates the raw csv and scraped data from Historic England. An [ipython notebook](/notebooks/harPeripleo.ipynb) using an R kernel walks you through this and provides access to [raw csv files](/notebooks/csv/), the [merged data](/notebooks/merged/) and finally the data ready to use in [openrefine](/notebooks/final/openrefineHAR.csv). 
+Within the [scripts](/scripts) folder, a single R file is available that generates the raw csv and scraped data from Historic England. An [ipython notebook](/notebooks/harPeripleo.ipynb) using an R kernel walks you through this and provides access to [raw csv files](/notebooks/csv/), the [merged data](/notebooks/merged/) and finally the data ready to use in [openrefine](/notebooks/final/openrefineHAR.csv). Also included is a notebook documenting the steps to use [openrefine commands](/notebooks/openrefine.ipynb) to enrich these data. 
 
 ## Openrefine
 
 The final data set from the HE website is then manipulated via the use of Openrefine, and a formatted markdown table of the commands used to manipulate data is available in the [notebooks folder](/notebooks/openrefine-commands.md) which is created from an exported [openrefine json](/notebooks/openrefine/json/openrefine-commands.json) file (you can reuse this). 
 
-## Getting Started
+## Tutorials
 
-To get started with the project, follow these steps:
+Included in this repository are two tutorial files. 
 
-1. Clone the repository:
-```bash
-    git clone https://github.com/micropasts/heritage-at-risk.git
-```
-2. Navigate to the project directory:  
-```bash
-    cd heritage-at-risk
-```
-3. Install the necessary dependencies:  
-```bash
-    npm install
-```
-4. This installs the node script dependencies for transforming CSV data that has been obtained from Historic England's opendata hub and transformed by the R scripts.
-    ```bash
-        cd scripts 
-        node ./transform-har-lp.js
-    ```
+1. [Building a customised Peripleo](/tutorial/customising-peripleo.md):  The Peripleo instance used here has had a few enhancements/changes applied to it. I have changed the infocards, type rendering and links from the Linked Places GeoJSON and amended colours. Changes were made in the peripleo folder. 
+2. [Using openrefine](/tutorial/openrefine.md): How to get enhanced data via the use of Openrefine. 
 
-The web application is served off github pages for free, using the docs folder.
-
-## Customised Peripleo
-
-The Peripleo instance used here has had a few enhancements/changes applied to it. I have changed the infocards, type rendering and links from the Linked Places GeoJSON and amended colours. Changes were made in the peripleo folder. To build the newer js file, I did the following:
-
-``` node
-    npm install
-    npm run build
-```
-
-Once built the files were copied to docs/js and I adapted the index.html file to point to these. 
+Guidance on how to configure Peripleo can be found on the [British Library's pages](https://github.com/britishlibrary/peripleo-lanc/) for this project. 
 
 ## Contributing
 
