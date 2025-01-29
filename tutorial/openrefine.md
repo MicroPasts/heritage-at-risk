@@ -158,6 +158,9 @@ For more advanced JSON parsing, refer to the [OpenRefine documentation](https://
     - **Expression**: Use a GREL expression to parse the JSON data and extract the desired information.
 5. Click "OK" to create the new column with the parsed data.
 
+!!! tip
+    If you want to parse things by path, this tool is useful: [https://jsonpathfinder.com/](https://jsonpathfinder.com/)
+
 For example, to extract the English Wikipedia URL from the JSON data:
 
 1. Click on the drop-down menu of the column containing the JSON data.
