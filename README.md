@@ -1,6 +1,7 @@
 # Heritage at Risk Mapping
 
-[![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--0246--2335-green.svg)](http://orcid.org/0000-0002-0246-2335)
+[![ORCiD](https://img.shields.io/badge/ORCiD-0000--0002--0246--2335-green.svg)](http://orcid.org/0000-0002-0246-2335) [![DOI](https://zenodo.org/badge/914311737.svg)](https://doi.org/10.5281/zenodo.14772487)
+
 
 This project uses Peripleo to map [heritage at risk data](https://historicengland.org.uk/advice/heritage-at-risk/) from [Historic England](https://historicengland.org.uk) and avoids the costs of using ESRI. Peripleo is a powerful tool for visualizing and exploring geospatial data, making it ideal for showcasing heritage sites that are at risk.
 

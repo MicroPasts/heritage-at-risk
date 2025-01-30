@@ -18,7 +18,7 @@ url: 'https://heritage-at-risk.museologi.st'
 identifiers:
   - description: "This repository contains the code and data for HAR Peripleo visualisation"
     type: doi
-    value: ''
+    value: '10.5281/zenodo.14772487'
 abstract: >-
   This project uses Peripleo to map heritage at risk data
   from Historic England and avoids the costs of using ESRI.
