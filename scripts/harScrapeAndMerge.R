@@ -14,16 +14,16 @@ if (any_not_installed) {
 } 
 
 # Create directory for storing CSV files
-if (!file.exists('C:/Users/dan.pett/heritage-at-risk/rawdata/csv')){
-  dir.create('C:/Users/dan.pett/heritage-at-risk/rawdata/csv')
+if (!file.exists('../rawdata/csv')){
+  dir.create('../rawdata/csv')
 }
 # Create directory for storing final CSV data
-if (!file.exists('C:/Users/dan.pett/heritage-at-risk/rawdata/final')){
-  dir.create('C:/Users/dan.pett/heritage-at-risk/rawdata/final')
+if (!file.exists('../rawdata/final')){
+  dir.create('../rawdata/final')
 }
 # Create directory for storing merged CSV data
-if (!file.exists('C:/Users/dan.pett/heritage-at-risk/rawdata/merged')){
-  dir.create('C:/Users/dan.pett/heritage-at-risk/rawdata/merged')
+if (!file.exists('../rawdata/merged')){
+  dir.create('../rawdata/merged')
 }
 # Download data from the Digital Planning page in csv format
 library(readr)
@@ -42,7 +42,7 @@ names(rawDataCols)[names(rawDataCols) == "reference"] <- "ListEntry"
 
 # Test your data again
 head(rawDataCols)
-write_csv(rawDataCols, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/HAR.csv')
+write_csv(rawDataCols, '../rawdata/csv/HAR.csv')
 cols <-  ncol(rawDataCols)
 message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
@@ -117,7 +117,7 @@ cols <- ncol(data)
 message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
 # Write to a csv file 
-write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/NHLE.csv')
+write_csv(data, '../rawdata/csv/NHLE.csv')
 
 # Load the jsonlite library
 library(jsonlite)
@@ -188,7 +188,7 @@ head(data)
 cols <- ncol(data)
 message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 # Write to a csv file 
-write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/ScheduledMonuments.csv')
+write_csv(data, '../rawdata/csv/ScheduledMonuments.csv')
 
 # Load the jsonlite library
 library(jsonlite)
@@ -260,7 +260,7 @@ head(data)
 cols <- ncol(data)
 message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 # Write to a csv file 
-write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Parks.csv')
+write_csv(data, '../rawdata/csv/Parks.csv')
 
 # Load the jsonlite library
 library(jsonlite)
@@ -318,7 +318,7 @@ coordsCast <- cbind(Easting = as.numeric(as.character(pointData$Easting)),
 bng_coords <- st_as_sf(data.frame(coordsCast), 
                      coords = c("Easting", "Northing"), 
                      crs = 27700) 
-
+..
 # Transform to WGS84 (EPSG:4326)
 wgs84_coords <- st_transform(bng_coords, 4326)
 
@@ -332,19 +332,19 @@ cols <- ncol(data)
 message(paste0('This produces a data frame that is a ', cols , ' column data set')) 
 
 # Write to a csv file 
-write_csv(data, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Battlefields.csv')
+write_csv(data, '../rawdata/csv/Battlefields.csv')
 # Load necessary library
 library(dplyr)
 # Read the CSV files
-file0 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/HAR.csv")
+file0 <- read.csv("../rawdata/csv/HAR.csv")
 head(file0)
-file1 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/NHLE.csv")
+file1 <- read.csv("../rawdata/csv/NHLE.csv")
 head(file1)
-file2 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Battlefields.csv")
+file2 <- read.csv("../rawdata/csv/Battlefields.csv")
 head(file2)
-file3 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/Parks.csv")
+file3 <- read.csv("../rawdata/csv/Parks.csv")
 head(file3)
-file4 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/ScheduledMonuments.csv")
+file4 <- read.csv("../rawdata/csv/ScheduledMonuments.csv")
 head(file4)
 
 # Set the common column, which is always ListEntry
@@ -354,11 +354,23 @@ common_column <- "ListEntry"
 # Filter file0 and join with NHLE
 common_rows_nhle <- merge(file0, file1, by = common_column) 
 head(common_rows_nhle)
+
+
 library(dplyr)
+
+common_rows_nhle <- merge(file0, file1, by = common_column) 
+head(common_rows_nhle)
+common_rows_battlefields <- merge(file0, file2, by = common_column) 
+head(common_rows_battlefields)
+common_rows_parks <- merge(file0, file3, by = common_column) 
+head(common_rows_parks)
+common_rows_scheduled <- merge(file0, file4, by = common_column) 
+head(common_rows_scheduled)
+
 merged <- bind_rows(common_rows_scheduled, common_rows_parks, common_rows_battlefields, common_rows_nhle)
 names(merged)[names(merged) == "documentation.url"] <- "url"
 head(merged)
-write.csv(merged, "C:/Users/dan.pett/heritage-at-risk/rawdata/merged/merged_har.csv", row.names = FALSE) 
+write.csv(merged, "../rawdata/merged/merged_har.csv", row.names = FALSE) 
 
 library(rvest)
 library(readr)
@@ -366,7 +378,7 @@ library(tidyverse)
 library(stringr)
 
 # Get the urls list from the previous CSV file created 
-urls <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/merged/merged_har.csv")
+urls <- read.csv("../rawdata/merged/merged_har.csv")
 
 # Function to scrape data from a single URL
 scrape_url <- function(url, reference) {
@@ -382,6 +394,11 @@ scrape_url <- function(url, reference) {
   }, error = function(e) {
     message(sprintf("Failed to scrape %s: %s", url, e$message))
     list(url = url, reference = reference, text_content = NA, error = e$message) 
+  },
+  finally = {
+    # Garbage collection within the function
+    closeAllConnections()
+    gc() # Call garbage collection after each URL is processed
   })
 }
 
@@ -398,7 +415,7 @@ successful_scrapes <- scraped_data_df %>% filter(!is.na(text_content)) %>% selec
 failed_scrapes <- scraped_data_df %>% filter(is.na(text_content))
 
 # Write failed results to CSV file
-write_csv(failed_scrapes, "C:/Users/dan.pett/heritage-at-risk/rawdata/csv/scraping_errors.csv") 
+write_csv(failed_scrapes, "../rawdata/csv/scraping_errors.csv") 
 # You might want these for reference.
 
 remove_text_before_location <- function(text) {
@@ -415,13 +432,13 @@ scraped_data_df <- successful_scrapes %>%
 head(scraped_data_df)
 
 # Write the scraped data to a new CSV file
-write_csv(scraped_data_df, "C:/Users/dan.pett/heritage-at-risk/rawdata/csv/scraped_data.csv") 
+write_csv(scraped_data_df, "../rawdata/csv/scraped_data.csv") 
 
 # Tidyverse was installed previously. 
 library(tidyverse)
 
 # Read the CSV file
-df <- read_csv('C:/Users/dan.pett/heritage-at-risk/rawdata/csv/scraped_data.csv', col_types = cols(.default = "c"))
+df <- read_csv('../rawdata/csv/scraped_data.csv', col_types = cols(.default = "c"))
 
 # Function to split text_content into key-value pairs
 split_text_content <- function(text) {
@@ -454,7 +471,7 @@ cols <- ncol(result_df)
 message(paste0('This has created a scraped and enhanced dataset of ', cols, ' columns'))
 
 # Write the result to a new CSV file
-write_csv(result_df, 'C:/Users/dan.pett/heritage-at-risk/rawdata/csv/processed_scraped_data.csv')
+write_csv(result_df, '../rawdata/csv/processed_scraped_data.csv')
 
 # Load necessary library installed previously
 library(dplyr)
@@ -471,8 +488,8 @@ if (any_not_installed) {
   }
 }
 # Read the CSV files
-file1 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/csv/processed_scraped_data.csv")
-file2 <- read.csv("C:/Users/dan.pett/heritage-at-risk/rawdata/merged/merged_har.csv")
+file1 <- read.csv("../rawdata/csv/processed_scraped_data.csv")
+file2 <- read.csv("../rawdata/merged/merged_har.csv")
 
 # Merge by the common column - url 
 common_column <- "url" 
@@ -489,6 +506,6 @@ common_rows <- clean_names(common_rows)
 head(common_rows)
 
 # Write csv
-write_csv(common_rows, 'C:/Users/dan.pett/heritage-at-risk/rawdata/final/openrefineHAR.csv')
+write_csv(common_rows, '../rawdata/final/openrefineHAR.csv')
 message(paste0('You have now downloaded and enhanced the Heritage At Risk dataset with ', cols , 
                ' columns - remember to change the pagination numbers for a full set')) 

@@ -1,6 +1,3 @@
-# This CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to generate yours today!
-
 cff-version: 1.2.0
 title: >-
   Heritage at Risk and Peripleo data mining and
@@ -9,6 +6,7 @@ message: >-
   If you use this software, please cite it using the
   metadata from this file.
 type: software
+date-released: "2025-01-30"
 authors:
   - given-names: Daniel
     family-names: Pett
@@ -17,6 +15,10 @@ authors:
     orcid: 'https://orcid.org/0000-0002-0246-2335'
 repository-code: 'https://github.com/MicroPasts/heritage-at-risk/'
 url: 'https://heritage-at-risk.museologi.st'
+identifiers:
+  - description: "This repository contains the code and data for HAR Peripleo visualisation"
+    type: doi
+    value: 
 abstract: >-
   This project uses Peripleo to map heritage at risk data
   from Historic England and avoids the costs of using ESRI.
@@ -31,3 +33,27 @@ keywords:
   - R
   - historic england
 license: MIT
+references:
+  - authors:
+      - family-names: Simon
+        given-names: Rainer
+    title: "Peripleo.JS"
+    type: software
+  - authors:
+      - family-names: Simon
+        given-names: Rainer
+      - family-names: Gadd
+        given-names: Stephen
+      - family-names: Rees
+        given-names: Gethin
+    title: "What is peripleo"
+    type: software
+   - authors:
+      - family-names: Simon
+        given-names: Rainer
+      - family-names: Gadd
+        given-names: Stephen
+      - family-names: Rees
+        given-names: Gethin
+    title: "Peripleo: Locating a National Collection"
+    type: software
