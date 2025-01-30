@@ -18,7 +18,7 @@ url: 'https://heritage-at-risk.museologi.st'
 identifiers:
   - description: "This repository contains the code and data for HAR Peripleo visualisation"
     type: doi
-    value: 
+    value: ''
 abstract: >-
   This project uses Peripleo to map heritage at risk data
   from Historic England and avoids the costs of using ESRI.
@@ -48,7 +48,7 @@ references:
         given-names: Gethin
     title: "What is peripleo"
     type: software
-   - authors:
+  - authors:
       - family-names: Simon
         given-names: Rainer
       - family-names: Gadd
