@@ -440,6 +440,24 @@ library(tidyverse)
 # Read the CSV file
 df <- read_csv('../rawdata/csv/scraped_data.csv', col_types = cols(.default = "c"))
 
+remove_castle_before_location <- function(text) {
+  # Replace "Castle:" with "Castle"
+  text <- gsub("Castle:", "Castle", text, fixed = TRUE)
+  text <- gsub("Walls:", "Walls", text, fixed = TRUE)
+  text <- gsub("walls:", "walls", text, fixed = TRUE)
+  text <- gsub("Abbey:", "Abbey", text, fixed = TRUE)
+  text <- gsub("Cross:", "Cross", text, fixed = TRUE)
+  text <- gsub("Mines:", "Mines", text, fixed = TRUE)
+  text <- gsub("Mine:", "Mine", text, fixed = TRUE)
+  text <- gsub("Mill:", "Mill", text, fixed = TRUE)
+  text <- gsub("Whitfield:", "Whitfield", text, fixed = TRUE)
+  return(text)
+}
+
+df <- df %>% 
+  mutate(text_content = sapply(text_content, remove_castle_before_location))
+
+
 # Function to split text_content into key-value pairs
 split_text_content <- function(text) {
   lines <- str_split(text, "\n")[[1]]
